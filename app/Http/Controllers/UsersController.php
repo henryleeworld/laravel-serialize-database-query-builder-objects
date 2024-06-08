@@ -14,7 +14,7 @@ class UsersController extends Controller
         $usersUnserialized = EloquentSerialize::unserialize($usersSerialized)->get();
         echo '使用者編號大於 10 的 2 筆資料反序列化結果：' . PHP_EOL;
         foreach ($usersUnserialized as $user) {
-            echo '使用者編號：' . $user->id . ' 的姓名為' . $user->name . PHP_EOL;
+            echo '使用者編號：' . $user->id . ' 的姓名為 ' . $user->name . PHP_EOL;
         }
     }
 }

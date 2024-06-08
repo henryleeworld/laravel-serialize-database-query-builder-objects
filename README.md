@@ -1,4 +1,4 @@
-# Laravel 8 序列化資料庫查詢產生器物件
+# Laravel 10 序列化資料庫查詢產生器物件
 
 引入 anourvalar 的 eloquent-serialize 套件來擴增序列化資料庫查詢產生器物件，將模型以及被一同載入的關聯轉換成具有一定格式的字串。
 
@@ -26,5 +26,5 @@ $ php artisan migrate --seed
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/YojqWNb.png)
+![](https://i.imgur.com/fjVfjEn.png)
 > 序列化用於儲存或傳遞值的過程中，同時不丟失其型別和結構
