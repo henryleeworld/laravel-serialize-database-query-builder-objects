@@ -10,11 +10,11 @@ class UsersController extends Controller
     public function show() 
     {
         $usersSerialized = EloquentSerialize::serialize(User::where('id', '>', '10')->limit(2));
-        echo '使用者編號大於 10 的 2 筆資料序列化結果：' . $usersSerialized . PHP_EOL;
+        echo __('Serialization results of 2 pieces of data with user ID numbers greater than 10:') . $usersSerialized . PHP_EOL;
         $usersUnserialized = EloquentSerialize::unserialize($usersSerialized)->get();
-        echo '使用者編號大於 10 的 2 筆資料反序列化結果：' . PHP_EOL;
+        echo __('Deserialization results of 2 pieces of data with user ID numbers greater than 10:') . $usersUnserialized . PHP_EOL;
         foreach ($usersUnserialized as $user) {
-            echo '使用者編號：' . $user->id . ' 的姓名為 ' . $user->name . PHP_EOL;
+            echo __('User ID:') . $user->id . __(' whose name is ') . $user->name . PHP_EOL;
         }
     }
 }
